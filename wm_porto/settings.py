@@ -25,7 +25,7 @@ SECRET_KEY = '4!hcr4gl3m9(ut_o0a(e*(q&g83sy3u6#u_t5&)i2!)kp0m@*('
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['wm-porto-danielasocas.c9users.io']
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 
