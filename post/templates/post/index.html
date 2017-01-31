@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <title>WM</title>
+    </head>
+    <body>
+        <p>Hi there!</p>
+        <p>It works!</p>
+        {% for comment in lasts_comment_list %}
+            <div class="comment">
+                <div class="date">{{ comment.created_date }}</div>
+                <strong>{{ comment.author }}</strong>
+                <p>{{ comment.text|linebreaks }}</p>
+            </div>
+        {% empty %}
+            <p>No comments here yet :(</p>
+        {% endfor %}
+    </body>
+</html>
