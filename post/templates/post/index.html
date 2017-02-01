@@ -5,6 +5,7 @@
     <body>
         <p>Hi there!</p>
         <p>It works!</p>
+        <a class="btn btn-default" href="{% url 'add_comment_to_post' %}">Add comment</a>
         {% for comment in lasts_comment_list %}
             <div class="comment">
                 <div class="date">{{ comment.created_date }}</div>
