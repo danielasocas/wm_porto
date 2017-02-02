@@ -1,4 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect, get_object_or_404
+from django.contrib.auth import authenticate, login
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 from .models import Comment
@@ -16,6 +18,13 @@ def add_comment_to_post(request):
         if form.is_valid():
             comment = form.save(commit=False)
             comment.save()
+            return redirect('index')
     else:
         form = CommentForm()
     return render(request, 'post/add_comment_to_post.html', {'form': form})
+    
+@login_required
+def comment_remove(request):
+    comment = get_object_or_404(Comment)
+    comment.delete()
+    return redirect('index')

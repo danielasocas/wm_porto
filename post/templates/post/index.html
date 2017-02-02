@@ -1,11 +1,6 @@
-<html>
-    <head>
-        <title>WM</title>
-    </head>
-    <body>
-        <p>Hi there!</p>
-        <p>It works!</p>
-        <a class="btn btn-default" href="{% url 'add_comment_to_post' %}">Add comment</a>
+{% extends 'post/base.html' %}
+
+    {% block content %}
         {% for comment in lasts_comment_list %}
             <div class="comment">
                 <div class="date">{{ comment.created_date }}</div>
@@ -15,5 +10,5 @@
         {% empty %}
             <p>No comments here yet :(</p>
         {% endfor %}
-    </body>
-</html>
+        <a class="btn btn-default" href="{% url 'add_comment_to_post' %}">Add comment</a>
+    {% endblock %}
