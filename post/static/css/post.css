@@ -22,24 +22,9 @@ header .row h1 {
 	text-align: center;
 }
 
-.comment {
-    padding: 20px;
-    display: block;
-    background-color: white;
-}
-
-.comment p {
-    font-size: 20px;
-}
-
-#author {
-    font-size: 25px;
-}
-
-.page-footer {
-    background-color: #000080;
-    color: #FFFFFF;
-    text-align:center;
+body{
+    background-color: #E6E6FA;
+    background-size: cover;
 }
 
 .jumbotron {
@@ -56,15 +41,36 @@ header .row h1 {
     margin: auto;
 }
 
-body{
-    background-color: #E6E6FA;
-    background-size: cover;
+.comment {
+    padding: 20px;
+    display: block;
+    background-color: white;
+    border-radius: 5px;
+    border: 2px solid #E6E6FA;
 }
+
+.comment p {
+    font-size: 20px;
+    background-color: #F0F8FF;
+    border-radius: 5px;
+
+}
+
+#author {
+    font-size: 25px;
+}
+
 
 #empty {
     font-size:25px;
 }
 
 .container h2 {
+    text-align:center;
+}
+
+.page-footer {
+    background-color: #000080;
+    color: #FFFFFF;
     text-align:center;
 }
