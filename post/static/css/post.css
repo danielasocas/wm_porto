@@ -33,12 +33,14 @@ body{
     background-size: cover;
     min-height: 500px;
     text-shadow: 0.25px 0.25px 0.25px #000000;
+    margin-bottom: 15px;
+    margin-top: 15px;
 }
+
 
 .info {
      background-image: url(../images/porto_wallpaper.jpg);
      background-size: cover;
-     background-color: #E6E6FA;
      border-radius: 10px;
 }
 
@@ -90,6 +92,10 @@ section .row img {
     font-size: 25px;
 }
 
+#add {
+    margin-top: 10px;
+    margin-left: -12px;
+}
 
 #empty {
     font-size:25px;
@@ -103,4 +109,7 @@ section .row img {
     background-color: #000080;
     color: #FFFFFF;
     text-align:center;
+    font-size: 16px;
+    padding: 10px 0;
+    margin-top: 15px;
 }

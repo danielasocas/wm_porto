@@ -1,9 +1,13 @@
 {% extends 'post/base.html' %}
 
 {% block content %}
-    <h1>New comment</h1>
-    <form method="POST" class="post-form">{% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit" class="save btn btn-success">Send</button>
-    </form>
+    <section class="jumbotron">
+        <section class="container">
+            <h1>New comment</h1>
+            <form method="POST" class="post-form">{% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit" class="save btn btn-success btn-lg btn-block">Send</button>
+            </form>
+        </section>
+    </section>    
 {% endblock %}

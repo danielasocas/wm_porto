@@ -84,13 +84,13 @@
                         <p>{{ comment.text|linebreaks }}</p>
                         <div class="date">{{ comment.created_date }}</div>
                         {% if user.is_authenticated %}
-                            <a class="btn btn-danger text-right" href="{% url 'comment_remove' pk=comment.pk %}"><span class="glyphicon glyphicon-remove"></span></a>
+                            <a id="delete" class="btn btn-danger text-right" href="{% url 'comment_remove' pk=comment.pk %}"><span class="glyphicon glyphicon-remove"></span></a>
                         {% else %}
                             <a class="btn btn-danger disabled" href=""><span class="glyphicon glyphicon-remove"></span></a>
                         {% endif %}
                     </div>
                 {% empty %}
-                    <p id="empty">&#x261F; Be our first comment! </p>
+                    <p id="empty">&#x261F; Be the first to comment! </p>
                 {% endfor %}
                     
             <a id="add" class="btn btn-warning btn-lg" href="{% url 'add_comment_to_post' %}">Add a comment</a>
