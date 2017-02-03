@@ -13,22 +13,28 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     </head>
     <body>
-        <div class="page-header">
-            {% if user.is_authenticated %}
-                <p class="top-menu">Bem vindo {{ user.username }}! <small>(<a href="{% url 'logout' %}">Log out</a>)</small></p>
-            {% else %}
-                <a href="{% url 'login' %}" class="top-menu"><span class="glyphicon glyphicon-lock"></span>Login</a>
-            {% endif %}
-            <h1><a href="/">Is Porto the best european destination?</a></a></h1>
-        </div>
+        <header class="container">
+  		    <div class=row>
+  		        <h1 class="col-sm-11 text-center"><a href="/">Is Porto the best european destination?</a></a></h1>
+                {% if user.is_authenticated %}
+                    <p class="login col-sm-1 text-center">{{ user.username }}! <small>(<a href="{% url 'logout' %}">Log out</a>)</small></p>
+                {% else %}
+                    <a class="login col-sm-1 text-center" href="{% url 'login' %}" class="top-menu"><span class="glyphicon glyphicon-lock"></span>Login</a>
+                {% endif %}
+                
+            </div>
+        </header>    
         
         <div class="content container">
             <div class="row">
-                <div class="col-md-8">
-                {% block content %}
-                {% endblock %}
+                <div class="col-md-10">
+                    {% block content %}
+                    {% endblock %}
                 </div>
             </div>
-    </div>      
+        </div>
+        <div class="page-footer">
+            <p><strong>&copy; Daniela Socas Gil</strong></p>
+        </div>
     </body>
 </html>

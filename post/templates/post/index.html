@@ -40,7 +40,7 @@
               <img src="static/images/carousel/ribeira.jpg" alt="Porto">
               <div class="carousel-caption">
                 <h3>Invicta</h3>
-                <p>Beatiful flowers in Kolymbari, Crete.</p>
+                <p>Night at the Ribeira.</p>
               </div>
             </div>
           </div>
@@ -68,5 +68,5 @@
         {% empty %}
             <p>No comments here yet :(</p>
         {% endfor %}
-        <a class="btn btn-default" href="{% url 'add_comment_to_post' %}">Add comment</a>
+        <a id="add" class="btn btn-default" href="{% url 'add_comment_to_post' %}">Add comment</a>
     {% endblock %}
