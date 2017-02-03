@@ -28,10 +28,35 @@ body{
 }
 
 .jumbotron {
-  background-image: url(../images/carousel/metro_ponte.png);
-  background-size: cover;
-  height: 500px;
-  text-shadow: 0.25px 0.25px 0.25px #000000;
+    display: flex;
+    background-image: url(../images/carousel/metro_ponte.png);
+    background-size: cover;
+    min-height: 500px;
+    text-shadow: 0.25px 0.25px 0.25px #000000;
+}
+
+.info {
+     background-image: url(../images/porto_wallpaper.jpg);
+     background-size: cover;
+     background-color: #E6E6FA;
+     border-radius: 10px;
+}
+
+.info .row {
+    align-items: center;
+}
+
+.info .row img{
+    max-height: 200px;
+    border-radius: 10px;
+}
+
+.info .row h3{
+    font-size: 300%;
+    color: goldenrod;
+    font-family: "Lucida Console", Monaco, monospace;
+    text-align: center;
+    font-weight: bold;
 }
 
 #myCarousel {
@@ -41,18 +66,23 @@ body{
     margin: auto;
 }
 
+section .row img {
+  margin: 0 0 30px;
+  width: 100%;
+}
+
 .comment {
     padding: 20px;
     display: block;
     background-color: white;
-    border-radius: 5px;
+    border-radius: 10px;
     border: 2px solid #E6E6FA;
 }
 
 .comment p {
     font-size: 20px;
     background-color: #F0F8FF;
-    border-radius: 5px;
+    border-radius: 10px;
 
 }
 
