@@ -6,32 +6,27 @@
         <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"> 
-        
         <link rel="stylesheet" href="{% static 'css/post.css' %}">
         <!-- Latest compiled and minified JavaScript -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     </head>
     <body>
-        <header class="container">
+        <header>
   		    <div class=row>
-  		        <h1 class="col-sm-11 text-center"><a href="/">Is Porto the best european destination?</a></a></h1>
+  		        <h1 class="col-sm-10"><a id="title" href="/">Is Porto the best european destination?</a></a></h1>
                 {% if user.is_authenticated %}
-                    <p class="login col-sm-1 text-center">{{ user.username }}! <small>(<a href="{% url 'logout' %}">Log out</a>)</small></p>
+                    <p class="login col-sm-2 "> Hello {{ user.username }}! <small><a class="btn btn-primary" href="{% url 'logout' %}">Logout</a></small></p>
                 {% else %}
-                    <a class="login col-sm-1 text-center" href="{% url 'login' %}" class="top-menu"><span class="glyphicon glyphicon-lock"></span>Login</a>
+                    <a class="login col-sm-2 btn btn-primary" href="{% url 'login' %}" class="top-menu"><span class="glyphicon glyphicon-lock"></span>Login</a>
                 {% endif %}
                 
             </div>
         </header>    
         
-        <div class="content container">
-            <div class="row">
-                <div class="col-md-10">
-                    {% block content %}
-                    {% endblock %}
-                </div>
-            </div>
+        <div class="content">
+            {% block content %}
+            {% endblock %}
         </div>
         <div class="page-footer">
             <p><strong>&copy; Daniela Socas Gil</strong></p>

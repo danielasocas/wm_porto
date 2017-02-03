@@ -1,28 +1,70 @@
+header {
+    background-color: #00008B;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+
+header .row h1 {
+    padding-left: 50px;
+    color: #FFFFFF;
+}
+
+#title {
+    color: gold;
+}
+
+#title:hover {
+  color: #ffffff;
+}
+
 .login {
-    color:#B22222;
-    margin-top: 25px;
-    border: 2px solid #FF0000;
-	border-radius: 4px;;
+    color: #FFFFFF;
+    margin-top: 20px;
+	text-align: center;
 }
 
 .comment {
-    padding:20px;
-    display: inline-block;
+    padding: 20px;
+    display: block;
+    background-color: white;
 }
 
-#add {
-    display:block;
+.comment p {
+    font-size: 20px;
 }
 
-header {
-    text-align:center;
-    background-image: url('./images/carousel/metro_ponte.png');
-    background-size: cover;
-    
+#author {
+    font-size: 25px;
 }
 
 .page-footer {
-    background-image: url('https://i.ytimg.com/vi/WTLs99-yjeU/maxresdefault.jpg');
+    background-color: #000080;
+    color: #FFFFFF;
+    text-align:center;
+}
+
+.jumbotron {
+  background-image: url(../images/carousel/metro_ponte.png);
+  background-size: cover;
+  height: 500px;
+  text-shadow: 0.25px 0.25px 0.25px #000000;
+}
+
+#myCarousel {
+    width:640px;
+    height:360px;
+    text-align:center;
+    margin: auto;
+}
+
+body{
+    background-color: #E6E6FA;
     background-size: cover;
+}
+
+#empty {
+    font-size:25px;
+}
+
+.container h2 {
     text-align:center;
 }

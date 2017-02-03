@@ -11,9 +11,5 @@ class Comment(models.Model):
     text = models.TextField()
     created_date = models.DateTimeField(default=timezone.now)
 
-    def approve(self):
-        self.approved_comment = True
-        self.save()
-
     def __str__(self):
         return self.text
