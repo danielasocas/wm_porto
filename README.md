@@ -1,4 +1,4 @@
-# WireMaze Porto miniprojecto
+#Porto miniprojecto
 Author: Daniela Socas Gil 
 Last update: 03/02/2017
 
